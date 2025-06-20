@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Distance Calculator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f1f5f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #1e3a8a;
+    }
+    label {
+      display: block;
+      text-align: left;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #374151;
+    }
+    input, select, button {
+      margin-top: 5px;
+      padding: 10px;
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid #cbd5e1;
+      font-size: 14px;
+    }
+    button {
+      background-color: #2563eb;
+      color: white;
+      font-weight: bold;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    button:hover {
+      background-color: #1d4ed8;
+    }
+    #result {
+      margin-top: 25px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #10b981;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🌍 Distance Calculator</h2>
+
+    <label>Latitude 1:</label><input id="lat1" type="number">
+    <label>Longitude 1:</label><input id="lng1" type="number">
+
+    <label>Latitude 2:</label><input id="lat2" type="number">
+    <label>Longitude 2:</label><input id="lng2" type="number">
+
+    <label>Unit:</label>
+    <select id="unit">
+      <option value="km">Kilometers</option>
+      <option value="mi">Miles</option>
+    </select>
+
+    <label>API Key:</label><input id="apiKey" type="text" placeholder="Paste your API key here">
+
+    <button onclick="calculateDistance()">Calculate</button>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
