@@ -18,8 +18,7 @@ async function calculateDistance() {
   };
 
   try {
-    const res = await fetch("https://distance-api-fpb5.onrender.com/api/distance
-", {
+    const res = await fetch("https://distance-api-fpb5.onrender.com/api/distance", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
